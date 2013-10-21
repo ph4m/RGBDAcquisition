@@ -71,9 +71,9 @@ else
      #git clone git://github.com/OpenNI/OpenNI.git 
      #cd OpenNI/Platform/Linux/CreateRedist
      #./RedistMaker
-     cd ../Redist
-     #sudo ./install.sh 
-     cd ../../../../
+     #cd ../Redist
+     ##sudo ./install.sh 
+     #cd ../../../../
 
      yaourt -G openni-git
      cd openni-git
