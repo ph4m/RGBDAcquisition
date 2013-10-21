@@ -70,6 +70,7 @@ else
      sudo pacman -S libxmu libxi freeglut libusb
      git clone git://github.com/OpenNI/OpenNI.git 
      cd OpenNI/Platform/Linux/CreateRedist
+     sed -e s/"python "/"python2 "/g RedistMaker > RedistMaker.tmp && mv RedistMaker.tmp RedistMaker
      ./RedistMaker
      
      cd ../Redist
