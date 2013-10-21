@@ -76,11 +76,11 @@ else
 
      yaourt -G openni-git
      cd openni-git
-     #sed -e s/"_gitbranch=\"unstable\""/_gitbranch=\"master\""/g PKGBUILD > PKGBUILD.tmp && mv PKGBUILD.tmp PKGBUILD
-     #makepkg -i
-     #cd ..
-     #mv openni-git/src/openni-build OpenNI
-     #rm -rf openni-git
+     sed -e 's/_gitbranch="unstable"/_gitbranch="master"/g' PKGBUILD > PKGBUILD.tmp && mv PKGBUILD.tmp PKGBUILD
+     makepkg -i
+     cd ..
+     mv openni-git/src/openni-build OpenNI
+     rm -rf openni-git
 
      cd ../Redist
      #sudo ./install.sh 
