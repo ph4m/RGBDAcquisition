@@ -68,12 +68,19 @@ else
   if test "$answer" != "N" -a "$answer" != "n";
   then
      sudo pacman -S libxmu libxi freeglut libusb
-     git clone git://github.com/OpenNI/OpenNI.git 
-     cd OpenNI/Platform/Linux/CreateRedist
-     sed -e s/"python "/"python2 "/g RedistMaker > RedistMaker.tmp && mv RedistMaker.tmp RedistMaker
-     chmod +x RedistMaker
-     ./RedistMaker
-     
+     #git clone git://github.com/OpenNI/OpenNI.git 
+     #cd OpenNI/Platform/Linux/CreateRedist
+     #sed -e s/"python "/"python2 "/g RedistMaker > RedistMaker.tmp && mv RedistMaker.tmp RedistMaker
+     #chmod +x RedistMaker
+     #./RedistMaker
+     yaourt -G openni-git
+     cd openni-git
+     sed -e s/"_gitbranch=\"unstable\""/_gitbranch=\"master\""/g PKGBUILD > PKGBUILD.tmp && mv PKGBUILD.tmp PKGBUILD
+     makepkg -i
+     cd ..
+     mv openni-git/src/openni-build OpenNI
+     rm -rf openni-git
+
      cd ../Redist
      #sudo ./install.sh 
  
