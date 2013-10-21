@@ -12,7 +12,7 @@ else
   read answer
   if test "$answer" != "N" -a "$answer" != "n";
   then
-     sudo apt-get install libxmu-dev libxi-dev freeglut3-dev libusb-dev  libusb-1.0-0-dev  
+     sudo pacman -S libxmu libxi freeglut libusb
      git clone git://github.com/OpenKinect/libfreenect.git
      cd libfreenect
      mkdir build
@@ -67,7 +67,7 @@ else
   read answer
   if test "$answer" != "N" -a "$answer" != "n";
   then
-     sudo apt-get install libxmu-dev libxi-dev freeglut3-dev libusb-dev  libusb-1.0-0-dev  
+     sudo pacman -S libxmu libxi freeglut libusb
      git clone git://github.com/OpenNI/OpenNI.git 
      cd OpenNI/Platform/Linux/CreateRedist
      ./RedistMaker
@@ -124,7 +124,7 @@ else
   read answer
   if test "$answer" != "N" -a "$answer" != "n";
   then
-     sudo apt-get install libxmu-dev libxi-dev freeglut3-dev libusb-dev  libusb-1.0-0-dev  
+     sudo pacman -S libxmu libxi freeglut libusb
      git clone git://github.com/OpenNI/OpenNI2.git
      cd OpenNI2
      make 
