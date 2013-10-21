@@ -131,11 +131,18 @@ else
   if test "$answer" != "N" -a "$answer" != "n";
   then
      sudo pacman -S libxmu libxi freeglut libusb
-     git clone git://github.com/OpenNI/OpenNI2.git
-     cd OpenNI2
-     make 
-     cd ..
+     #git clone git://github.com/OpenNI/OpenNI2.git
+     #cd OpenNI2
+     #make 
+     #cd ..
      
+     yaourt -G openni2
+     cd openni2
+     makepkg -i
+     cd ..
+     mv openni2/src/OpenNI2 .
+     rm -rf openni2
+
      #should be at 3dparty dir
      cd ..  
      #should be at root dir
