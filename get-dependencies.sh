@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get install build-essential cmake
+sudo pacman -S base-devel cmake
 
 cd 3dparty
 ./get_third_party_libs.sh
