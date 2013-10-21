@@ -74,7 +74,7 @@ else
      #chmod +x RedistMaker
      #./RedistMaker
 
-     #yaourt -G openni-git
+     yaourt -G openni-git
      #cd openni-git
      #sed -e s/"_gitbranch=\"unstable\""/_gitbranch=\"master\""/g PKGBUILD > PKGBUILD.tmp && mv PKGBUILD.tmp PKGBUILD
      #makepkg -i
