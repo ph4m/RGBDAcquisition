@@ -71,6 +71,7 @@ else
      git clone git://github.com/OpenNI/OpenNI.git 
      cd OpenNI/Platform/Linux/CreateRedist
      sed -e s/"python "/"python2 "/g RedistMaker > RedistMaker.tmp && mv RedistMaker.tmp RedistMaker
+     chmod +x RedistMaker
      ./RedistMaker
      
      cd ../Redist
